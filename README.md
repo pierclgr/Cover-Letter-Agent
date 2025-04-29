@@ -12,9 +12,8 @@ To install the program:
 ## Execution
 To execute the program, after running the setup:
 1. Open a shell
-2. Move to the project folder using `cd ./Cover-Letter-Agent`
-3. Make the installation script executable using `chmod +x ./run.sh`
-4. Run the execution script using `./run.sh`
+2. Make the installation script executable using `chmod +x ./run.sh`
+3. Run the execution script using `./run.sh`
 
 ## Screenshots
 ![main_screen](screenshots/main_screen.png)
