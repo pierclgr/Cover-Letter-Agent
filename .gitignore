@@ -1,0 +1,9 @@
+# created by virtualenv automatically
+venv/
+config/
+db/
+app_data/
+
+.DS_Store
+__pycache__/
+.idea/
