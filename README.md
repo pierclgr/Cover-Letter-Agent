@@ -17,4 +17,4 @@ To execute the program, after running the setup:
 4. Run the execution script using `./run.sh`
 
 ## Screenshots
-![Cover Letter Agent Interface](https://raw.githubusercontent.com/pierclgr/Cover-Letter-Agent/main/main_screen.png)
+![main_screen](screenshots/main_screen.png)
