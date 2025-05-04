@@ -180,7 +180,8 @@ class CoverLetterAgent:
         self.profile_task = Task(
             description=(
                 "Compile a detailed personal and professional profile using tools to extract and synthesize "
-                "information from the applicant resume and its personal write-up ({personal_writeup})."
+                "information from the applicant resume and also emphasize the candidate's personality and personal "
+                "characteristic extracted from the personal writeup ({personal_writeup}) of the candidate."
             ),
             expected_output=(
                 "A comprehensive profile document that includes skills, project experiences, contributions, interests, "
@@ -196,7 +197,8 @@ class CoverLetterAgent:
                 "letter to highlight the most relevant areas of the applicant. Adjust and enhance the cover letter "
                 "content according to the applicants resume. Make sure this is the best cover letter ever but don't "
                 "make up any information. Match the characteristics of the applicant with the job requirements and "
-                "highlight how the candidate's profile aligns with the job requirements."
+                "highlight how the candidate's profile aligns with the job requirements, both on a professional and "
+                "personal side."
             ),
             expected_output=(
                 "A cover letter document written on the basis to the job requirements and the profile of the applicant "
