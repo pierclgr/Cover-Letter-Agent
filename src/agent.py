@@ -62,7 +62,7 @@ class CoverLetterAgent:
         else:
             # use local Ollama model if no openai key is provided
             llm = LLM(
-                model="ollama/llama3.2:3b",
+                model="ollama/qwen3:latest",
                 base_url="http://localhost:11434"
             )
 

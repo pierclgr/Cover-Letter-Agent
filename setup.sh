@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Shell script to download and install Ollama, pull the llama3.2:3b model,
+# Shell script to download and install Ollama, pull the qwen3:latest model,
 # and set up a Python virtual environment
 
 # Set up error handling
@@ -59,19 +59,19 @@ OLLAMA_PID=$!
 echo "Waiting for Ollama service to initialize..."
 sleep 10
 
-# Pull the llama3.2:3b model
-echo "Step 3: Pulling the llama3.2:3b model..."
-ollama pull llama3.2:3b
+# Pull the qwen3:latest model
+echo "Step 3: Pulling the qwen3:latest model..."
+ollama pull qwen3:latest
 
 # Check if model was installed successfully
 if [ $? -ne 0 ]; then
-    echo "Failed to pull the llama3.2:3b model."
+    echo "Failed to pull the qwen3:latest model."
     # Kill the Ollama service process if it's still running
     kill $OLLAMA_PID 2>/dev/null || true
     exit 1
 fi
 
-echo "llama3.2:3b model has been successfully pulled!"
+echo "qwen3:latest model has been successfully pulled!"
 
 # Set up Python virtual environment
 echo "Step 4: Setting up Python virtual environment..."

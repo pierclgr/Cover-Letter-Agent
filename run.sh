@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Shell script to run Ollama with llama3.2:3b and execute main.py in a virtual environment
+# Shell script to run Ollama with qwen3:latest and execute main.py in a virtual environment
 
 # Set up error handling
 set -e
@@ -48,15 +48,15 @@ else
 fi
 
 # Check if the model is already pulled
-echo "Step 2: Checking llama3.2:3b model..."
-if ollama list | grep -q "llama3.2:3b"; then
-    echo "Model llama3.2:3b is already available."
+echo "Step 2: Checking qwen3:latest model..."
+if ollama list | grep -q "qwen3:latest"; then
+    echo "Model qwen3:latest is already available."
 else
-    echo "Model llama3.2:3b not found. Pulling now..."
-    ollama pull llama3.2:3b
+    echo "Model qwen3:latest not found. Pulling now..."
+    ollama pull qwen3:latest
 
     if [ $? -ne 0 ]; then
-        echo "Failed to pull the llama3.2:3b model."
+        echo "Failed to pull the qwen3:latest model."
         # Kill the Ollama service process if we started it
         if [ -n "$OLLAMA_PID" ]; then
             kill $OLLAMA_PID 2>/dev/null || true
@@ -64,7 +64,7 @@ else
         exit 1
     fi
 
-    echo "llama3.2:3b model has been successfully pulled!"
+    echo "qwen3:latest model has been successfully pulled!"
 fi
 
 # Run main.py using the virtual environment
