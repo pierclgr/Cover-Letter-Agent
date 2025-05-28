@@ -160,7 +160,8 @@ class CoverLetterAgent:
             backstory=(
                 "With a strategic mind and an eye for detail, you excel at writing cover letters to highlight the most "
                 "relevant skills and experiences of a candidate, ensuring they resonate perfectly with the job's "
-                "requirements."
+                "requirements. You have access to tools to access the job applicant's resume and experience, to build "
+                "the personalized profile."
             ),
             llm=llm
         )
@@ -181,11 +182,13 @@ class CoverLetterAgent:
             description=(
                 "Compile a detailed personal and professional profile using tools to extract and synthesize "
                 "information from the applicant resume and also emphasize the candidate's personality and personal "
-                "characteristic extracted from the personal writeup ({personal_writeup}) of the candidate."
+                "characteristic extracted from the personal writeup ({personal_writeup}) of the candidate. You MUST use"
+                "the tool to access the resume of the job applicant and MUST use the personal writeup to create a "
+                "detailed profile."
             ),
             expected_output=(
-                "A comprehensive profile document that includes skills, project experiences, contributions, interests, "
-                "and communication style about the applicant."
+                "A comprehensive profile document that includes hard and soft skills, project experiences, "
+                "contributions, interests, and communication style about the applicant."
             ),
             agent=self.profiler,
             async_execution=True
@@ -198,12 +201,12 @@ class CoverLetterAgent:
                 "content according to the applicants resume. Make sure this is the best cover letter ever but don't "
                 "make up any information. Match the characteristics of the applicant with the job requirements and "
                 "highlight how the candidate's profile aligns with the job requirements, both on a professional and "
-                "personal side."
+                "personal side. Be detailed but at the same time concise. The cover letter must be MAX 430 WORDS long."
             ),
             expected_output=(
-                "A cover letter document written on the basis to the job requirements and the profile of the applicant "
-                "that effectively highlights the candidate's qualifications and experiences that match the job "
-                "requirements."
+                "A cover letter of MAXIMUM 430 WORDS document written on the basis to the job requirements and the "
+                "profile of the applicant that effectively highlights the candidate's qualifications and experiences "
+                "that match the job requirements."
             ),
             context=[self.research_task, self.profile_task],
             agent=self.cover_letter_writer
